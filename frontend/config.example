@@ -1,0 +1,10 @@
+# Google Generative AI API Key
+REACT_APP_GOOGLE_API_KEY=AIzaSyBEdDPAiT_DwnM5iO4BnMoROnyyOQVnIKc
+
+# Backend API URL
+const config = {
+  backendUrl: 'http://localhost:5000'
+};
+
+# Environment
+REACT_APP_ENV=development

@@ -19,8 +19,8 @@ const ChatInterface = () => {
     scrollToBottom();
   }, [chat]);
 
-  // Initialize Google Generative AI with the hardcoded API key
-  const genAI = new GoogleGenerativeAI('AIzaSyBEdDPAiT_DwnM5iO4BnMoROnyyOQVnIKc');
+  // Initialize Google Generative AI with the API key from environment
+  const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GOOGLE_API_KEY);
 
   const toggleChat = () => {
     setIsOpen(!isOpen);

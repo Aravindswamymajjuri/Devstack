@@ -438,7 +438,7 @@ router.post('/student/login', async (req,res) => {
      return res.status(401).json({message:'Invalid email or password'});
    }
 
-   const token=jwt.sign({userId : student._id , role : 'student'}, 'your-secret-key',{expiresIn:'5h'});
+   const token=jwt.sign({userId : student._id , role : 'student'}, process.env.JWT_SECRET || 'your-secret-key',{expiresIn:'5h'});
    res.json({token,student:student});
  } catch(error){
    res.status(500).json({error:error.message});
@@ -472,7 +472,7 @@ router.post('/mentor/login', async (req, res) => {
     // Create the JWT token
     const token = jwt.sign(
       { userId: mentor._id, role: 'mentor' },
-      'your-secret-key',
+      process.env.JWT_SECRET || 'your-secret-key',
       { expiresIn: '5h' }
     );
 
@@ -498,7 +498,7 @@ router.post('/coordinator/login', async (req, res) => {
     }
     const token = jwt.sign(
       { userId: coordinator._id, role: 'coordinator' },
-      'your-secret-key',
+      process.env.JWT_SECRET || 'your-secret-key',
       { expiresIn: '5h' }
     );
     res.json({ token, role: 'coordinator',coordinatordetails:coordinator });
@@ -560,7 +560,7 @@ router.post('/admin/verify-otp', async (req, res) => {
     // Create JWT token
     const token = jwt.sign(
       { userId: admin._id, role: 'admin' },
-      'your-secret-key',
+      process.env.JWT_SECRET || 'your-secret-key',
       { expiresIn: '5h' }
     );
     
