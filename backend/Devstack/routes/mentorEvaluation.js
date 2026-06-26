@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const HackMentor = require('../models/HackMentor');
-const HackTeam = require('../models/HackTeam');
-const HackSubmission = require('../models/HackSubmission');
-const Hackathon = require('../models/HackathonAdmin');
+const HackMentor = require('../Models/HackMentor');
+const HackTeam = require('../Models/HackTeam');
+const HackSubmission = require('../Models/HackSubmission');
+const Hackathon = require('../Models/HackathonAdmin');
 const { authenticateToken, requireRole } = require('../../middleware/auth');
 
 /**

@@ -1,6 +1,6 @@
 const express = require("express");
 const multer = require("multer");
-const Notes = require("../models/Hacknotes");
+const Notes = require("../Models/Hacknotes");
 const Folder = require("../models/Hackfolder");
 const { authenticateToken } = require("../../middleware/auth");
 
