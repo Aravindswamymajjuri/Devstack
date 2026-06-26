@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Hackathon = require('../models/HackathonAdmin');
+const Hackathon = require('../Models/HackathonAdmin');
 const upload = require("../middleware/upload");
 const { authenticateToken } = require("../../middleware/auth");
 
