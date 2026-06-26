@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const Video = require("../Models/Hackvideo");
-const VideoFolder = require("../models/Hackvideofolder");
+const VideoFolder = require("../Models/Hackvideofolder");
 const { authenticateToken } = require("../../middleware/auth");
 
 const router = express.Router();
